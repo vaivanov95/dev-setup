@@ -2,13 +2,13 @@
 
 ## Partitioning structure
 Disk
-├── 100 MB - EFI System
-├── 930.29 GB - Windows (C:) NTFS
-├── 50 GB - RAW (for Ubuntu root)
-├── 8 GB - RAW (for Swap)
-├── 100 GB - NTFS (Shared)
-├── ~800 GB - RAW (for K8s data)
-└── 781 MB - Recovery
+* 100 MB - EFI System
+* 930.29 GB - Windows (C:) NTFS
+* 50 GB - RAW (for Ubuntu root)
+* 8 GB - RAW (for Swap)
+* 100 GB - NTFS (Shared)
+* 800 GB - RAW (for K8s data)
+* 781 MB - Recovery
 
 ## Security architecture
 Core Idea:
