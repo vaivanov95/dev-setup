@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+alias use_shared_auth='. ${DEV_SETUP_PATH}/scripts/auth/use_shared_auth'
+alias use_local_auth='. ${DEV_SETUP_PATH}/scripts/auth/use_local_auth'
+alias sync_auth='. ${DEV_SETUP_PATH}/scripts/auth/sync_auth'
