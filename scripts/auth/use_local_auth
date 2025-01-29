@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# Use local storage for auth data (password store and PGP keys)
+# Used when shared one not yet available
+export PASSWORD_STORE_DIR=~/.password-store
+export GNUPGHOME=~/.gnupg

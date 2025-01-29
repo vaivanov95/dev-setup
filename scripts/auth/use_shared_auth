@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# Use shared storage for auth data (password store and PGP keys)
+# Shared is used by default
+export PASSWORD_STORE_DIR=${SHARED_PATH}/auth/.password-store
+export GNUPGHOME=${SHARED_PATH}/auth/.gnupg

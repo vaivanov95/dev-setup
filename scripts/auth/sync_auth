@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Remove credentials from user's folder
+rm -Rf ~/.password-store
+rm -Rf ~/.gnupg
+
+# Copy credentials from shared partition (they're considered source of truth)
+cp -r /mnt/shared/auth/.gnupg ~/
+cp -r /mnt/shared/auth/.password-store ~/
