@@ -39,15 +39,32 @@ Memorized High-Entropy Passphrase
 
 
 
+## Initial setup
+1. Clone this repo to e.g. `~/dev-setup`
+2. Mount shared NTFS partition to `/mnt/shared`
+3. In `~/.bashrc` add at the beginning:
+```bash
+
+# Setup scripts and docs repo
+DEV_SETUP_PATH=~/dev-setup
+# Shared NTFS volume mount path
+SHARED_PATH=/mnt/shared
+
+source ${DEV_SETUP_PATH}/scripts/.init
+
+```
+** Note: in WSL instance shared path will be different **
+
+### On system startup
+Using local auth store, get encryption password and use it to mount the NTFS and ext4 (data) partitions.
+After NTFS share is mounted switch to shared auth and update local.
+
+
+
 ## Plan
 
-
-1. install Ubuntu using:
-            50GB partition -> ext4, mount as /
-            8GB partition -> swap
-
-2. Set up LUKS encryption on the existing 100GB NTFS partition (this will preserve NTFS but add encryption)
-3. Create LUKS+ext4 on the 800GB partition for K8s
+1. Set up LUKS encryption on the existing 100GB NTFS partition (this will preserve NTFS but add encryption)
+2. Create LUKS+ext4 on the 800GB partition for K8s
 
 
 The 100GB NTFS partition needs special handling because:
